@@ -165,6 +165,9 @@ nav {
     gap: 20px; 
     justify-content: center; 
     border-radius: 5px;
+    align-items: center; /* AJOUTÉ : Pour aligner les enfants au centre */
+    width: 100%;        /* AJOUTÉ : Pour que le container occupe l'espace */
+    margin-top: 20px;
 }
 
 .btn-primary, .btn-secondary {
@@ -223,15 +226,16 @@ nav {
 
 @media (max-width: 580px) {
     .hero-btns {
-        flex-direction: column; /* Empile les boutons verticalement */
+        flex-direction: column !important; 
         width: 100%;
-        gap: 15px;
+        max-width: 320px; /* AJOUTÉ : Pour éviter que les boutons soient TROP larges sur petit écran */
+        margin: 0 auto;  /* AJOUTÉ : Centre le bloc entier */
     }
 
     .btn-primary, .btn-secondary {
-        width: 100%; /* Largeur totale pour un meilleur confort tactile */
-        text-align: center;
-        padding: 18px 20px; /* Un peu plus haut pour le mobile */
+        display: block;   /* CHANGÉ : Force l'affichage en bloc */
+        width: 100%; 
+        box-sizing: border-box; /* AJOUTÉ : Inclus le padding dans la largeur */
     }
 }
 
