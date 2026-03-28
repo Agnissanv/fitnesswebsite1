@@ -1,0 +1,440 @@
+/* --- VARIABLES & RESET --- */
+:root {
+    --primary-red: #FF0000;
+    --dark-bg: #0A0A0A;
+    --darker-bg: #000000;
+    --light-text: #FFFFFF;
+    --gray-text: #B0B0B0;
+    --glass: rgba(255, 255, 255, 0.05);
+    --transition: all 0.3s ease-in-out;
+    --shadow-sm: 0 2px 8px rgba(0,0,0,0.05);
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--dark-bg);
+    color: var(--light-text);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, .logo {
+    font-family: 'Bebas Neue', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+ul { 
+    list-style: none; 
+}
+a { 
+    text-decoration: none; 
+    color: inherit; 
+    transition: var(--transition); 
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+span { 
+    color: var(--primary-red); 
+}
+
+/* --- HEADER & NAV --- */
+.main-header {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.9);
+    border-bottom: 1px solid var(--glass);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo { 
+    font-size: 2rem; 
+    font-weight: bold; 
+}
+
+.nav-links { 
+    display: flex; 
+    gap: 30px; 
+}
+.nav-links a:hover { 
+    color: var(--primary-red); 
+}
+
+.btn-cta-small {
+    background: var(--primary-red);
+    padding: 10px 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    border-radius: 5px;
+}
+
+.menu-toggle { 
+    display: none; 
+    font-size: 1.5rem; 
+    cursor: pointer; 
+}
+
+/* --- HERO SECTION --- */
+.hero {
+    padding: 60px 0;
+    display: flex;
+    align-items: center;
+    min-height: 80vh;
+    position: relative; /* INDISPENSABLE : Sert de point de repère pour la vidéo */
+    overflow: hidden;   /* Empêche la vidéo de déborder de la section */
+}
+
+/* --- La magie de la vidéo en fond --- */
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Remplit l'écran sans déformer, comme background-size: cover */
+    z-index: 0;        /* On la place tout au fond */
+}
+
+/* --- Le filtre psychologique (L'overlay sombre) --- */
+/* Cela recrée ton effet linear-gradient pour que ton texte blanc reste lisible et classe */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(64, 10, 10, 0.5));
+    z-index: 1; /* Se place au-dessus de la vidéo, mais sous le texte */
+}
+
+/* --- On s'assure que le contenu passe au premier plan --- */
+.hero-content {
+    position: relative;
+    z-index: 2; /* Le texte et les boutons passent au-dessus de tout ! */
+}
+
+.hero h1 { 
+    font-size: 5rem; 
+    line-height: 1; 
+    margin-bottom: 20px; 
+}
+.hero p { 
+    font-size: 1.2rem; 
+    color: var(--gray-text); 
+    margin-bottom: 30px; 
+    max-width: 600px; 
+}
+
+.hero-btns {
+    display: flex; 
+    gap: 20px; 
+    justify-content: center; 
+    border-radius: 5px;
+}
+
+.btn-primary, .btn-secondary {
+    padding: 15px 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+.btn-primary { 
+    background: var(--primary-red); 
+    border: 2px solid var(--primary-red); 
+}
+.btn-primary:hover { 
+    background: transparent; 
+    color: var(--primary-red); 
+}
+
+.btn-secondary { 
+    border: 2px solid var(--light-text); 
+}
+.btn-secondary:hover { 
+    background: var(--light-text); 
+    color: var(--darker-bg); 
+}
+
+
+
+
+/* --- FEATURES --- */
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    padding: 100px 20px;
+}
+
+.feature-card {
+    background: var(--glass);
+    padding: 40px;
+    text-align: center;
+    border-bottom: 3px solid transparent;
+    transition: var(--transition);
+}
+
+.feature-card:hover { 
+    border-color: var(--primary-red); 
+    transform: translateY(-10px); 
+}
+.feature-card i { 
+    font-size: 3rem; 
+    color: var(--primary-red); 
+    margin-bottom: 20px; 
+}
+.feature-card h3 { 
+    margin-bottom: 15px; 
+    font-size: 1.5rem; 
+}
+
+/* --- SERVICES --- */
+.services { 
+    padding: 100px 0; 
+    background: var(--darker-bg); 
+}
+.section-title { 
+    font-size: 3.5rem; 
+    text-align: center; 
+    margin-bottom: 60px; 
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.service-item {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+}
+
+.service-img {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.5s ease;
+    filter: grayscale(100%);
+}
+
+.service-item:hover .service-img { 
+    transform: scale(1.1); 
+    filter: grayscale(0%); 
+}
+
+.service-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px;
+    background: linear-gradient(transparent, rgba(0,0,0,0.9));
+}
+
+/* --- AVIS --- */
+.testimonials {
+    padding: 30px 0;
+}
+.reviews-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* 1 colonne sur mobile */
+    gap: 30px;
+}
+.review-card {
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: var(--shadow-sm);
+    text-align: center;
+    transition: var(--transition);
+    border: 1px solid #8a1111;
+}
+/* Nettoyage du texte des avis */
+.review-card p {
+    font-style: italic;
+    margin: 20px 0;
+}
+
+.review-card .author {
+    font-size: 1rem;
+    color: var(--primary-color);
+}
+
+.stars {
+    color: #FFD700;
+    margin-bottom: 10px;
+}
+/* Responsive pour la grille d'avis */
+@media (min-width: 768px) {
+    .reviews-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 colonnes sur desktop */
+    }
+}
+
+/* --- PRICING --- */
+.pricing { padding: 100px 20px; }
+.pricing-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.price-card {
+    background: var(--glass);
+    padding: 50px;
+    width: 350px;
+    text-align: center;
+    position: relative;
+}
+
+.price-card.featured {
+    border: 2px solid var(--primary-red);
+    transform: scale(1.05);
+}
+
+.price-card h3 { 
+    font-size: 2rem; 
+    margin-bottom: 20px; 
+}
+.price { 
+    font-size: 1.5rem; 
+    font-weight: bold; 
+    color: var(--primary-red); 
+    margin-bottom: 30px; 
+}
+.price-card ul { 
+    margin-bottom: 30px; 
+    color: var(--gray-text); 
+}
+.price-card ul li { 
+    margin-bottom: 10px; 
+}
+
+.badge {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--primary-red);
+    padding: 5px 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+/* --- CONTACT --- */
+.contact { 
+    padding: 100px 0; 
+    background: var(--darker-bg); 
+}
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-form input, .contact-form select, .contact-form textarea {
+    background: var(--glass);
+    border: 1px solid #333;
+    padding: 15px;
+    color: rgb(255, 0, 0);
+    font-family: inherit;
+}
+
+.contact-form textarea { 
+    height: 150px; 
+}
+.social-icons { 
+    margin-top: 30px; 
+    display: flex; 
+    gap: 20px; 
+    font-size: 1.5rem; 
+}
+
+
+iframe {
+    max-width: 100%;
+    height: 50%;
+    border-radius: 10px;
+}
+
+
+/* --- FOOTER --- */
+footer {
+    padding: 50px 0;
+    text-align: center;
+    border-top: 1px solid var(--glass);
+    font-size: 0.9rem;
+    color: var(--gray-text);
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+    .nav-links, .btn-cta-small { 
+        display: none; 
+    }
+    .menu-toggle { 
+        display: block; 
+    }
+    .hero h1 { 
+        font-size: 3rem; 
+    }
+    .contact-wrapper { 
+        grid-template-columns: 1fr; 
+    }
+    .price-card.featured { 
+        transform: scale(1); 
+    }
+}
+@media (max-width: 768px) {
+    .nav-links.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background: rgba(0,0,0,0.95);
+        padding: 20px;
+        text-align: center;
+    }
+}
