@@ -78,6 +78,11 @@ nav {
     font-size: 2rem; 
     font-weight: bold; 
 }
+.logo img {
+    max-width: 150px; /* Évite que le logo ne soit trop grand ou trop petit */
+    width: 100%;
+    height: auto;
+}
 
 .nav-links { 
     display: flex; 
@@ -143,15 +148,16 @@ nav {
 }
 
 .hero h1 { 
-    font-size: 5rem; 
-    line-height: 1; 
+    font-size: clamp(2.5rem, 8vw, 5rem);
+    line-height: 1.1; 
     margin-bottom: 20px; 
 }
 .hero p { 
-    font-size: 1.2rem; 
+    font-size: clamp(1rem, 4vw, 1.2rem);
     color: var(--gray-text); 
     margin-bottom: 30px; 
     max-width: 600px; 
+    padding: 0 10px;
 }
 
 .hero-btns {
@@ -186,7 +192,48 @@ nav {
     color: var(--darker-bg); 
 }
 
+@media (max-width: 992px) {
+    .nav-links, .btn-cta-small {
+        display: none; /* Cache le menu et le petit bouton sur mobile */
+    }
 
+    .menu-toggle {
+        display: block; /* Affiche l'icône bars */
+        color: var(--light-text);
+    }
+    
+    nav {
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-content {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .hero p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 580px) {
+    .hero-btns {
+        flex-direction: column; /* Empile les boutons verticalement */
+        width: 100%;
+        gap: 15px;
+    }
+
+    .btn-primary, .btn-secondary {
+        width: 100%; /* Largeur totale pour un meilleur confort tactile */
+        text-align: center;
+        padding: 18px 20px; /* Un peu plus haut pour le mobile */
+    }
+}
 
 
 /* --- FEATURES --- */
