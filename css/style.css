@@ -65,6 +65,7 @@ span {
     z-index: 1000;
     background: rgba(0, 0, 0, 0.9);
     border-bottom: 1px solid var(--glass);
+    margin-top: 0.5rem;
 }
 
 nav {
