@@ -372,12 +372,12 @@ nav.container { display: flex; justify-content: space-between; align-items: cent
 }
 .coach-card { text-align: center; }
 .coach-photo {
-    aspect-ratio: 3/4;
+    aspect-ratio: 4/4;
     border-radius: var(--radius);
     background: linear-gradient(155deg, var(--anchor-2), var(--anchor));
     border: 1px solid var(--anchor-3);
     display: flex; flex-direction: column; align-items: center; justify-content: center;
-    gap: 12px;
+    gap: 8px;
     margin-bottom: 18px;
 }
 .coach-photo i { font-size: 2.4rem; color: var(--action); opacity: .8; }
