@@ -230,4 +230,42 @@ document.addEventListener('DOMContentLoaded', () => {
     const footerYear = document.getElementById('footerYear');
     if (footerYear) footerYear.textContent = new Date().getFullYear();
 
+    /* ============================================================
+       11. COMPTEURS ANIMÉS — STATS DU HERO (accueil uniquement)
+       ============================================================ */
+    const heroStatNums = document.querySelectorAll('.hero-stat .num[data-target]');
+
+    if (heroStatNums.length) {
+        const formatNumber = (value, target) => {
+            // Garde le format "2 000" (espace comme séparateur de milliers) pour les grands nombres
+            return target >= 1000 ? value.toLocaleString('fr-FR') : String(value);
+        };
+
+        const animateCount = (el) => {
+            const target = parseInt(el.dataset.target, 10);
+            const suffix = el.dataset.suffix || '';
+            const duration = 1400;
+            const start = performance.now();
+
+            const step = (now) => {
+                const progress = Math.min((now - start) / duration, 1);
+                const eased = 1 - Math.pow(1 - progress, 3); // easeOutCubic
+                const current = Math.round(target * eased);
+                el.textContent = formatNumber(current, target) + suffix;
+
+                if (progress < 1) {
+                    requestAnimationFrame(step);
+                } else {
+                    el.textContent = formatNumber(target, target) + suffix; // valeur finale exacte
+                }
+            };
+            requestAnimationFrame(step);
+        };
+
+        // Léger délai pour laisser le hero "s'installer" avant que les chiffres montent
+        setTimeout(() => {
+            heroStatNums.forEach(animateCount);
+        }, 400);
+    }
+
 });
