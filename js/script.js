@@ -231,7 +231,18 @@ document.addEventListener('DOMContentLoaded', () => {
     if (footerYear) footerYear.textContent = new Date().getFullYear();
 
     /* ============================================================
-       11. COMPTEURS ANIMÉS — STATS DU HERO (accueil uniquement)
+       11. VIDÉO HERO — FONDU DOUX QUAND ELLE EST PRÊTE
+       (au lieu d'un cut brutal du dégradé vers la vidéo)
+       ============================================================ */
+    const heroVideo = document.getElementById('heroVideo');
+    if (heroVideo) {
+        heroVideo.addEventListener('loadeddata', () => {
+            heroVideo.classList.add('is-ready');
+        });
+    }
+
+    /* ============================================================
+       12. COMPTEURS ANIMÉS — STATS DU HERO (accueil uniquement)
        ============================================================ */
     const heroStatNums = document.querySelectorAll('.hero-stat .num[data-target]');
 
