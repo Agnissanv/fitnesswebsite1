@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | Apex Fit — Salle de Sport à Abidjan</title>
+<meta name="description" content="Contactez Apex Fit à Abidjan pour réserver votre séance découverte gratuite, poser une question ou visiter la salle.">
+<meta property="og:title" content="Contact | Apex Fit">
+<meta property="og:description" content="Contactez Apex Fit à Abidjan pour réserver votre séance découverte gratuite, poser une question ou visiter la salle.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="imgs/apexfit-logo.png">
+<link rel="icon" href="imgs/apexfit-logo.png" type="image/png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="main-header" id="mainHeader">
+    <nav class="container">
+        <div class="logo">
+            <a href="index.html"><img src="imgs/apexfit-logo.png" alt="Apex Fit"></a>
+        </div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="a-propos.html">À propos</a></li>
+            <li><a href="programmes.html">Programmes</a></li>
+            <li><a href="planning.html">Planning</a></li>
+            <li><a href="tarifs.html">Tarifs</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="header-actions">
+            <a href="contact.html" class="btn btn-primary">Essai Gratuit</a>
+            <button class="menu-toggle" id="mobileMenu" aria-label="Ouvrir le menu" aria-expanded="false">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+</header>
+
+<section class="page-hero" style="background: radial-gradient(circle at 10% 15%, rgba(255,90,54,0.25), transparent 45%), linear-gradient(180deg, rgba(18,18,18,.55) 0%, rgba(18,18,18,.88) 100%), url('imgs/page-hero/contact.jpg') center/cover no-repeat;">
+    <div class="container">
+        <p class="breadcrumb"><a href="index.html">Accueil</a><span class="sep">/</span><span class="current">Contact</span></p>
+        <h1>Rejoignez <span>Apex Fit</span></h1>
+        <p>Une question, une envie de visiter la salle ou de réserver votre séance découverte ? Écrivez-nous.</p>
+    </div>
+</section>
+
+<section class="contact" style="padding-top:60px;">
+    <div class="container">
+        <div class="contact-wrapper">
+            <div class="contact-info reveal">
+                <div class="info-line"><i class="fas fa-map-marker-alt"></i> Adresse à confirmer, Abidjan</div>
+                <div class="info-line"><i class="fas fa-phone"></i> +225 XX XX XX XX XX</div>
+                <div class="info-line"><i class="fas fa-envelope"></i> contact@apexfit.ci</div>
+                <div class="info-line"><i class="fab fa-whatsapp"></i> +225 XX XX XX XX XX (WhatsApp)</div>
+
+                <div class="hours-block">
+                    <h4>Horaires d'ouverture</h4>
+                    <div class="hours-row"><span>Lundi — Vendredi</span><span>06h00 – 22h00</span></div>
+                    <div class="hours-row"><span>Samedi</span><span>08h00 – 20h00</span></div>
+                    <div class="hours-row"><span>Dimanche</span><span>09h00 – 14h00</span></div>
+                </div>
+
+                <div class="social-icons">
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+
+            <form class="contact-form reveal" id="contactForm">
+                <div class="form-row">
+                    <div><label for="fname">Nom complet</label><input type="text" id="fname" name="name" placeholder="Votre nom" required></div>
+                    <div><label for="femail">Email</label><input type="email" id="femail" name="email" placeholder="vous@email.com" required></div>
+                </div>
+                <div><label for="fphone">Téléphone</label><input type="tel" id="fphone" name="phone" placeholder="+225 XX XX XX XX XX"></div>
+                <div>
+                    <label for="fprogram">Programme souhaité</label>
+                    <select id="fprogram" name="program">
+                        <option value="">Choisir un programme</option>
+                        <option value="musculation">Musculation</option>
+                        <option value="crossfit">CrossFit</option>
+                        <option value="hiit">HIIT & Cardio</option>
+                        <option value="boxe">Boxe & Combat</option>
+                        <option value="yoga">Yoga & Stretching</option>
+                        <option value="collectif">Cours Collectifs</option>
+                        <option value="coaching">Coaching Privé</option>
+                        <option value="nutrition">Nutrition</option>
+                    </select>
+                </div>
+                <div><label for="fmessage">Message</label><textarea id="fmessage" name="message" placeholder="Votre message (facultatif)"></textarea></div>
+                <button type="submit" class="btn btn-primary btn-block">Envoyer la demande</button>
+                <p class="form-status" id="formStatus"></p>
+            </form>
+        </div>
+
+        <div class="map-embed reveal">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3972.6667566504834!2d-4.001317389564105!3d5.31457613600818!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!5e0!3m2!1sfr!2sci!4v1774560478257!5m2!1sfr!2sci" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Localisation Apex Fit"></iframe>
+        </div>
+        <p class="map-note">Carte à remplacer par la position exacte une fois l'adresse confirmée.</p>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <img src="imgs/apexfit-logo.png" alt="Apex Fit">
+                <p>La salle de sport la plus complète d'Abidjan. Musculation, CrossFit, HIIT, boxe, yoga et coaching privé, réunis pour votre progression.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="a-propos.html">À propos</a></li>
+                    <li><a href="programmes.html">Programmes</a></li>
+                    <li><a href="planning.html">Planning</a></li>
+                    <li><a href="tarifs.html">Tarifs</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Suivez-nous</h4>
+                <ul>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">TikTok</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="footerYear"></span> Apex Fit. Tous droits réservés.</p>
+            <p>Design &amp; développement — Agnissan Isaac Valen / IDS Tech</p>
+        </div>
+    </div>
+</footer>
+
+<a href="https://wa.me/225XXXXXXXXXX" class="whatsapp-float" id="whatsappFloat" target="_blank" rel="noopener" aria-label="Contacter sur WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+</a>
+<button class="back-to-top" id="backToTop" aria-label="Retour en haut">
+    <i class="fas fa-arrow-up"></i>
+</button>
+
+<div class="modal-overlay" id="subscribeModal">
+    <div class="modal-box">
+        <button class="modal-close" id="modalClose" aria-label="Fermer"><i class="fas fa-times"></i></button>
+        <i class="fas fa-credit-card modal-icon"></i>
+        <h3>Paiement en ligne bientôt disponible</h3>
+        <p>Cette fonctionnalité est en cours d'activation. En attendant, finalisez votre inscription via WhatsApp ou directement en salle — c'est tout aussi rapide.</p>
+        <a href="https://wa.me/225XXXXXXXXXX" class="btn btn-primary btn-block" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> Continuer sur WhatsApp</a>
+    </div>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>

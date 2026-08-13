@@ -1,197 +1,190 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Overdose Gym | CrossFit & Haute Intensité - Marcory Residentiel</title>
-    <meta name="description" content="Rejoignez l'élite du fitness à Abidjan. Overdose Gym à Marcory Residentiel : CrossFit, HIIT, et coaching privé dans une ambiance brute et électrique.">
-    
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
-    <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apex Fit | Le Sommet de Votre Forme — Salle de Sport à Abidjan</title>
+<meta name="description" content="Apex Fit, la salle de sport la plus complète d'Abidjan. Musculation, CrossFit, HIIT, Boxe, Yoga, coaching privé et suivi nutritionnel. Réservez votre séance découverte gratuite.">
+<meta property="og:title" content="Apex Fit | Le Sommet de Votre Forme">
+<meta property="og:description" content="Apex Fit, la salle de sport la plus complète d'Abidjan. Musculation, CrossFit, HIIT, Boxe, Yoga, coaching privé et suivi nutritionnel. Réservez votre séance découverte gratuite.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="imgs/apexfit-logo.png">
+<link rel="icon" href="imgs/apexfit-logo.png" type="image/png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    
-    <header class="main-header">
-        <nav class="container">
 
-            <!-- <div class="logo">
-                <a href="#home">OVERDOSE<span>GYM</span></a>
-            </div> -->
-
-            <div class="logo">
-                <a href="#home"><img src="imgs/logo-no-bg.png" alt="" width="25%"></a>
-            </div>
-            <ul class="nav-links">
-                <li><a href="#home">Accueil</a></li>
-                <li><a href="#services">Programmes</a></li>
-                <li><a href="#avis">Avis</a></li>
-                <li><a href="#pricing">Tarifs</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <a href="#contact" class="btn-cta-small">Prendre RDV</a>
-            <div class="menu-toggle" id="mobile-menu">
+<header class="main-header" id="mainHeader">
+    <nav class="container">
+        <div class="logo">
+            <a href="index.html"><img src="imgs/apexfit-logo.png" alt="Apex Fit"></a>
+        </div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="a-propos.html">À propos</a></li>
+            <li><a href="programmes.html">Programmes</a></li>
+            <li><a href="planning.html">Planning</a></li>
+            <li><a href="tarifs.html">Tarifs</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="header-actions">
+            <a href="contact.html" class="btn btn-primary">Essai Gratuit</a>
+            <button class="menu-toggle" id="mobileMenu" aria-label="Ouvrir le menu" aria-expanded="false">
                 <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+</header>
+
+<section id="home" class="hero">
+    <!-- Placeholder : dépose ta vidéo réelle dans video/hero.mp4 (et une image dans imgs/hero-poster.jpg).
+         Tant qu'ils sont absents, le dégradé de fond en CSS prend le relais automatiquement. -->
+    <video class="hero-video" autoplay loop muted playsinline poster="imgs/hero-poster.jpg">
+        <source src="video/hero.mp4" type="video/mp4">
+    </video>
+    <div class="container hero-content">
+        <span class="eyebrow">Abidjan — Nouvelle génération fitness</span>
+        <h1>Grimpez vers votre <span>sommet.</span></h1>
+        <p class="lead">Apex Fit est la salle de sport la plus complète d'Abidjan : musculation, CrossFit, HIIT, boxe, yoga et coaching privé, réunis dans un seul espace pensé pour votre progression.</p>
+        <div class="hero-btns">
+            <a href="contact.html" class="btn btn-primary"><i class="fas fa-bolt"></i> Réserver ma séance gratuite</a>
+            <a href="programmes.html" class="btn btn-outline-dark">Découvrir les programmes</a>
+        </div>
+        <div class="hero-stats">
+            <div class="hero-stat"><span class="num">2 000 m²</span><span class="label">Espace d'entraînement</span></div>
+            <div class="hero-stat"><span class="num">8+</span><span class="label">Programmes disponibles</span></div>
+            <div class="hero-stat"><span class="num">7j/7</span><span class="label">Accès à la salle</span></div>
+        </div>
+    </div>
+</section>
+
+<div class="marquee-band" aria-hidden="true">
+    <div class="marquee-track">
+        <span>MUSCULATION</span><span>CROSSFIT</span><span>HIIT & CARDIO</span><span>BOXE</span><span>YOGA</span><span>COACHING PRIVÉ</span><span>NUTRITION</span>
+        <span>MUSCULATION</span><span>CROSSFIT</span><span>HIIT & CARDIO</span><span>BOXE</span><span>YOGA</span><span>COACHING PRIVÉ</span><span>NUTRITION</span>
+    </div>
+</div>
+
+<section class="features">
+    <div class="container">
+        <div class="section-head reveal">
+            <span class="eyebrow">Pourquoi Apex Fit</span>
+            <h2 class="section-title">Tout ce qu'il faut pour <span>progresser</span></h2>
+            <p class="section-sub">Un seul abonnement, un accès complet. Pensé pour que chaque visite vous rapproche un peu plus du sommet.</p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="features-grid">
+            <div class="feature-card reveal"><i class="fas fa-dumbbell"></i><h3>Équipement Professionnel</h3><p>Machines et plateaux de force dernière génération, entretenus quotidiennement.</p></div>
+            <div class="feature-card reveal"><i class="fas fa-user-friends"></i><h3>Coachs Certifiés</h3><p>Une équipe diplômée présente sur le plateau pour corriger et motiver.</p></div>
+            <div class="feature-card reveal"><i class="fas fa-shower"></i><h3>Vestiaires & Douches</h3><p>Espaces propres et sécurisés avec casiers individuels.</p></div>
+            <div class="feature-card reveal"><i class="fas fa-car"></i><h3>Parking Sécurisé</h3><p>Stationnement gratuit et surveillé pour tous les membres.</p></div>
+            <div class="feature-card reveal"><i class="fas fa-apple-alt"></i><h3>Suivi Nutritionnel</h3><p>Un accompagnement diététique en option pour aligner alimentation et objectifs.</p></div>
+            <div class="feature-card reveal"><i class="fas fa-clock"></i><h3>Amplitude Horaire</h3><p>Ouvert 7j/7, tôt le matin et tard le soir, pour s'adapter à votre emploi du temps.</p></div>
+        </div>
+    </div>
+</section>
+
+<div class="ascent-divider ascent-to-dark" aria-hidden="true">
+    <svg viewBox="0 0 1200 46" preserveAspectRatio="none"><polyline class="peak-line" points="0,36 90,26 170,34 260,14 340,28 430,8 520,24 610,4 700,20 790,10 880,26 970,6 1060,22 1140,12 1200,18" /></svg>
+</div>
+
+<section class="services">
+    <div class="container">
+        <div class="section-head reveal">
+            <span class="eyebrow">Aperçu</span>
+            <h2 class="section-title">Huit disciplines, <span>un seul lieu</span></h2>
+            <p class="section-sub">Musculation, CrossFit, HIIT, boxe, yoga, cours collectifs, coaching privé et nutrition.</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-item reveal"><div class="service-img" style="background-image:url('imgs/programmes/musculation.jpg'); background-size:cover; background-position:center;"></div><div class="service-info"><h3>Musculation</h3><p>Plateau de force complet.</p></div></div>
+            <div class="service-item reveal"><div class="service-img" style="background-image:url('imgs/programmes/crossfit.jpg'); background-size:cover; background-position:center;"></div><div class="service-info"><h3>CrossFit</h3><p>Entraînements fonctionnels en groupe.</p></div></div>
+            <div class="service-item reveal"><div class="service-img" style="background-image:url('imgs/programmes/boxe.jpg'); background-size:cover; background-position:center;"></div><div class="service-info"><h3>Boxe & Combat</h3><p>Boxe anglaise et travail technique.</p></div></div>
+        </div>
+        <a href="programmes.html" class="preview-link reveal">Voir les 8 programmes en détail <i class="fas fa-arrow-right"></i></a>
+    </div>
+</section>
+
+<div class="ascent-divider ascent-to-light" aria-hidden="true">
+    <svg viewBox="0 0 1200 46" preserveAspectRatio="none"><polyline class="peak-line" points="0,18 90,28 170,10 260,24 340,6 430,22 520,4 610,20 700,8 790,26 880,12 970,30 1060,14 1140,24 1200,10" /></svg>
+</div>
+
+<section class="testimonials" id="avis">
+    <div class="container">
+        <div class="section-head reveal">
+            <span class="eyebrow">Témoignages</span>
+            <h2 class="section-title">Ils visent le <span>sommet</span> avec nous</h2>
+        </div>
+        <div class="reviews-grid">
+            <div class="review-card reveal"><div class="stars">★★★★★</div><p class="quote">"Une salle complète, propre et bien équipée. L'ambiance donne vraiment envie de revenir."</p><h3 class="author">Marie-Laure K.</h3><span class="author-role">Membre depuis 6 mois</span></div>
+            <div class="review-card reveal"><div class="stars">★★★★★</div><p class="quote">"Les coachs sont disponibles et à l'écoute, peu importe le niveau. Je recommande."</p><h3 class="author">Yann Joël D.</h3><span class="author-role">Membre depuis 1 an</span></div>
+            <div class="review-card reveal"><div class="stars">★★★★★</div><p class="quote">"Le meilleur rapport qualité-prix d'Abidjan pour un espace aussi complet."</p><h3 class="author">Hassan C.</h3><span class="author-role">Membre depuis 3 mois</span></div>
+        </div>
+    </div>
+</section>
+
+<section class="cta-band">
+    <div class="container">
+        <h2>Prêt à viser le sommet ?</h2>
+        <p>Réservez votre séance découverte gratuite dès aujourd'hui, sans engagement.</p>
+        <a href="contact.html" class="btn btn-outline-dark"><i class="fas fa-bolt"></i> Réserver ma séance</a>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <img src="imgs/apexfit-logo.png" alt="Apex Fit">
+                <p>La salle de sport la plus complète d'Abidjan. Musculation, CrossFit, HIIT, boxe, yoga et coaching privé, réunis pour votre progression.</p>
             </div>
-        </nav>
-    </header>
-
-    <!-- hero -->
-    <section id="home" class="hero">
-        <video class="hero-video" autoplay loop muted playsinline poster="imgs/img1.jpg">
-                <source src="video/vid1.mp4" type="video/mp4">
-            </video>
-        <div class="overlay"></div>
-        <div class="hero-content container">
-            <h1 class="fade-in">Dépassez vos <span>Limites</span></h1>
-            <p>L'expérience fitness la plus intense de Marcory Residentiel. Force, Discipline, Communauté.</p>
-            <div class="hero-btns">
-                <a href="#services" class="btn-primary">Découvrir les WOD</a>
-                <a href="#contact" class="btn-secondary">Rejoindre la Tribu</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- info -->
-    <section class="features container">
-        <div class="feature-card">
-            <i class="fas fa-dumbbell"></i>
-            <h3>Équipement Élite</h3>
-            <p>Le meilleur matériel pour l'haltérophilie et le conditionnement physique.</p>
-        </div>
-        <div class="feature-card">
-            <i class="fas fa-users"></i>
-            <h3>Communauté Forte</h3>
-            <p>Ici, on ne s'entraîne pas seul. On progresse ensemble.</p>
-        </div>
-        <div class="feature-card">
-            <i class="fas fa-heartbeat"></i>
-            <h3>Résultats Réels</h3>
-            <p>Programmation sur mesure pour transformer votre corps et votre mental.</p>
-        </div>
-    </section>
-
-    <!-- les services -->
-    <section id="services" class="services">
-        <div class="container">
-            <h2 class="section-title">Nos <span>Programmes</span></h2>
-            <div class="services-grid">
-                <div class="service-item">
-                    <div class="service-img" style="background-image: url('imgs/CrossFit.jpg');"></div>
-                    <div class="service-info">
-                        <h3>CrossFit</h3>
-                        <p>WOD variés combinant gymnastique, cardio et force.</p>
-                    </div>
-                </div>
-                <div class="service-item">
-                    <div class="service-img" style="background-image: url('imgs/HIIT_Cardio.jpg');"></div>
-                    <div class="service-info">
-                        <h3>HIIT & Cardio</h3>
-                        <p>Brûlez un maximum de calories en un minimum de temps.</p>
-                    </div>
-                </div>
-                <div class="service-item">
-                    <div class="service-img" style="background-image: url('imgs/Coaching_Prive.jpg');"></div>
-                    <div class="service-info">
-                        <h3>Coaching Privé</h3>
-                        <p>Un accompagnement 1-on-1 pour atteindre vos objectifs spécifiques.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Avis clients -->
-    <section class="testimonials" id="avis">
-        <div class="container">
-            <h2>Ils ont choisi l'<span>intensité</span></h2>
-            <div class="reviews-grid">
-                    <div class="review-card">
-                        <div class="stars">★★★★★</div>
-                        <p>"La meilleure salle de Residentiel. L'ambiance est incroyable et les coachs sont de vrais pros."</p>
-                        <h3 class="author">Marie-Laure K.</h3>
-                    </div>
-
-                    <div class="review-card">
-                        <div class="stars">★★★★★</div>
-                        <p>"Le top des tops pour un moment sportif pour tout les niveaux 👌🏽🧡 …"</p>
-                        <h3 class="author">Yann Joël.</h3>
-                    </div>
-
-                    <div class="review-card">
-                        <div class="stars">★★★★★</div>
-                        <p>"Salle superbement équipée, très grande et surtout utile à plusieurs domaines de sportif. Je conseille fortement !"</p>
-                        <h3 class="author">Hassan Chouman.</h3>
-                    </div>
-                </div>
-        </div>
-    </section>
-
-    <section id="pricing" class="pricing container">
-        <h2 class="section-title">Nos <span>Abonnements</span></h2>
-        <div class="pricing-grid">
-            <div class="price-card">
-                <h3>Séance Unitaire</h3>
-                <div class="price">15.000 FCFA</div>
+            <div class="footer-col">
+                <h4>Navigation</h4>
                 <ul>
-                    <li>Accès 1 séance</li>
-                    <li>WOD encadré</li>
-                    <li>Utilisation vestiaire</li>
+                    <li><a href="a-propos.html">À propos</a></li>
+                    <li><a href="programmes.html">Programmes</a></li>
+                    <li><a href="planning.html">Planning</a></li>
+                    <li><a href="tarifs.html">Tarifs</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
-            <div class="price-card featured">
-                <div class="badge">Populaire</div>
-                <h3>Mensuel Illimité</h3>
-                <div class="price">30.000 FCFA</div>
+            <div class="footer-col">
+                <h4>Suivez-nous</h4>
                 <ul>
-                    <li>Accès illimité</li>
-                    <li>Tous les cours collectifs</li>
-                    <li>Accès Open Gym</li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">TikTok</a></li>
                 </ul>
             </div>
         </div>
-    </section>
-
-    <section id="contact" class="contact">
-        <div class="container contact-wrapper">
-            <div class="contact-info">
-                <h2>Rejoignez <span>Overdose Gym</span></h2>
-                <p><i class="fas fa-map-marker-alt"></i> Marcory Residentiel, Abidjan</p>
-                <p><i class="fas fa-phone"></i> +225 XX XX XX XX</p>
-                <p><i class="fas fa-envelope"></i> contact@overdosegym.com</p>
-                <div class="social-icons">
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-whatsapp"></i></a>
-                </div> <br>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3972.6667566504834!2d-4.001317389564105!3d5.31457613600818!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfc1ebf11b6675b3%3A0x3e30f96407524594!2sCROSS%20FIT%20OVERDOSE!5e0!3m2!1sfr!2sga!4v1774560478257!5m2!1sfr!2sga" width="500" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-
-            <form class="contact-form" action="">
-                <input type="text" placeholder="Votre Nom" required>
-                <input type="email" placeholder="Votre Email" required>
-                <select>
-                    <option value="">Choisir un programme</option>
-                    <option value="crossfit">CrossFit</option>
-                    <option value="hiit">HIIT</option>
-                    <option value="coaching">Coaching Privé</option>
-                </select>
-                <textarea placeholder="Votre Message"></textarea>
-                <button type="submit" class="btn-primary">Envoyer</button>
-            </form>
+        <div class="footer-bottom">
+            <p>&copy; <span id="footerYear"></span> Apex Fit. Tous droits réservés.</p>
+            <p>Design &amp; développement — Agnissan Isaac Valen / IDS Tech</p>
         </div>
-        <div id="map">
-            </div>
-    </section>
+    </div>
+</footer>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 Overdose Gym. Design par Agnissan Isaac Valen.</p>
-        </div>
-    </footer>
+<a href="https://wa.me/225XXXXXXXXXX" class="whatsapp-float" id="whatsappFloat" target="_blank" rel="noopener" aria-label="Contacter sur WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+</a>
+<button class="back-to-top" id="backToTop" aria-label="Retour en haut">
+    <i class="fas fa-arrow-up"></i>
+</button>
 
-    <script src="js/scritpt.js"></script>
+<div class="modal-overlay" id="subscribeModal">
+    <div class="modal-box">
+        <button class="modal-close" id="modalClose" aria-label="Fermer"><i class="fas fa-times"></i></button>
+        <i class="fas fa-credit-card modal-icon"></i>
+        <h3>Paiement en ligne bientôt disponible</h3>
+        <p>Cette fonctionnalité est en cours d'activation. En attendant, finalisez votre inscription via WhatsApp ou directement en salle — c'est tout aussi rapide.</p>
+        <a href="https://wa.me/225XXXXXXXXXX" class="btn btn-primary btn-block" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> Continuer sur WhatsApp</a>
+    </div>
+</div>
+
+<script src="js/script.js"></script>
 </body>
 </html>
