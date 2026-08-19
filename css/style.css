@@ -30,9 +30,13 @@
     --header-h: 84px;
 }
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
+* {
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
 
-html { scroll-behavior: smooth; }
+html {scroll-behavior: smooth; }
 
 body {
     font-family: var(--font-body);
@@ -53,9 +57,20 @@ h1, h2, h3, h4 {
 p { color: var(--text-muted-dark); }
 
 ul { list-style: none; }
-a { text-decoration: none; color: inherit; transition: var(--transition); }
-img { max-width: 100%; display: block; }
-button { font-family: inherit; cursor: pointer; border: none; }
+a { 
+    text-decoration: none; 
+    color: inherit; 
+    transition: var(--transition); 
+}
+img { 
+    max-width: 100%; 
+    display: block; 
+}
+button { 
+    font-family: inherit; 
+    cursor: pointer; 
+    border: none; 
+}
 
 .container {
     max-width: var(--container);
@@ -128,6 +143,7 @@ button { font-family: inherit; cursor: pointer; border: none; }
 .btn {
     display: inline-flex;
     align-items: center;
+    text-align: center;
     gap: 10px;
     padding: 16px 34px;
     font-family: var(--font-mono);
@@ -205,6 +221,7 @@ nav.container { display: flex; justify-content: space-between; align-items: cent
     position: relative;
     overflow: hidden;
     padding-top: var(--header-h);
+
     /* Repli tant que la vraie vidéo/photo de salle n'est pas fournie */
     background:
         radial-gradient(circle at 15% 20%, rgba(255,90,54,0.16), transparent 45%),
@@ -229,8 +246,8 @@ nav.container { display: flex; justify-content: space-between; align-items: cent
 .hero-content {
     position: relative;
     z-index: 2;
-    max-width: 760px;
-    padding: 60px 0;
+    max-width: 750px;
+    padding: 50px 0;
 }
 .hero-content .eyebrow { color: var(--action); }
 .hero h1 {
@@ -895,8 +912,8 @@ footer {
 
 @media (max-width: 580px) {
     .hero-btns { flex-direction: column; }
-    .hero-btns .btn { width: 100%; }
-    .hero-stats { gap: 26px; }
+    .hero-btns .btn { width: 90%; }
+    .hero-stats { gap: 25px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
